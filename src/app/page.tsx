@@ -10,12 +10,12 @@ const Home = () => {
     <main className="relative flex flex-col">
       <section className="relative h-[25rem] autoShow w-full flex flex-col">
         <Carousel projects={projects} />
-        <Link href={"/projects"}>
+        <Link href={"/projects"} className="flex w-full justify-center">
           <Button
             type={ButtonType.primary}
             label="Check projects"
             icon="view"
-            className="text-3xl! py-2! place-self-center"
+            className="self-center text-2xl! py-2! place-self-center"
           />
         </Link>
       </section>
