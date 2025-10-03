@@ -70,7 +70,7 @@ const AboutPage = () => {
           <p className="paragraph appearLeft">
             My passion for technology began in my final year of high school,
             where I was introduced to the fundamentals of programming through
-            Pascal in my TIC's class.
+            Pascal in my TIC&apos;s class.
           </p>
           <p className="paragraph appearLeft">
             This initial exposure sparked a curiosity that quickly grew into a
@@ -109,7 +109,7 @@ const AboutPage = () => {
           </p>
         </div>
         <div className="w-3/4 flex flex-col gap-5 self-center">
-          <h2 className={"subtitle appearBottom"}>What I’m Looking For</h2>
+          <h2 className={"subtitle appearBottom"}>What I&apos;m Looking For</h2>
           <p className="paragraph appearBottom">
             As a dedicated college student, I am actively seeking remote
             freelance opportunities that offer flexibility and the chance to

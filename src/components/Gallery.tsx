@@ -41,7 +41,13 @@ const Gallery = ({ images }: GalleryProps) => {
 
     // Clean up the interval when the component unmounts
     return () => clearInterval(interval);
-  }, [getNextImage, popAnimation]);
+  }, [
+    getNextImage,
+    popAnimation,
+    dropAnimation,
+    listControls,
+    displayControls,
+  ]);
 
   return (
     <div className="w-full flex flex-col shadow-md shadow-black/50 p-2 sm:p-4 relative">
