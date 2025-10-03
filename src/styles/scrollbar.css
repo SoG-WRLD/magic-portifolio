@@ -1,0 +1,25 @@
+/* Modern, minimalistic, semi-transparent scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsla(234, 85%, 20%, 0.5);
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsla(234, 85%, 20%, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsla(234, 85%, 20%, 0.5) transparent;
+}

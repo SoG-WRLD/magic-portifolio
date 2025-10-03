@@ -1,0 +1,29 @@
+.title {
+  font-size: 44px;
+  font-weight: 900;
+}
+.subtitle {
+  font-size: 32px;
+  font-weight: 800;
+}
+.paragraph {
+  font-size: 14px;
+  font-weight: 500;
+}
+.keyValueLI:nth-child(even),
+.keyValueLI:nth-child(odd) {
+  color: var(--color-primary-300);
+  @apply sm:text-sm text-sm flex gap-1.5 items-baseline capitalize;
+}
+.keyValueLI:nth-child(odd) {
+  color: var(--color-primary-400);
+  @apply pl-1;
+}
+.keyValueLI:nth-child(even) .liValue,
+.keyValueLI:nth-child(odd) .liValue {
+  color: var(--color-primary-50);
+  @apply sm:text-lg text-lg font-semibold normal-case;
+}
+.keyValueLI:nth-child(odd) .liValue {
+  color: var(--color-primary-200);
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Page generator",
+  "id": "page_generator.0.1",
+  "description": "Page generator for celebrations or invitations, dynamically creates pages and uploads to the cloud",
+  "icon": "",
+  "images": [],
+  "languages": [{ "name": "TypeScript", "logoPath": "/icons/typescript.svg" }],
+  "status": "uploaded"
+}

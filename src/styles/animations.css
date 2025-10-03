@@ -1,0 +1,91 @@
+.autoShow {
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
+}
+.appearLeft {
+  animation: textAppearLeft both;
+  animation-timeline: view(70% 5%);
+}
+.appearRight {
+  animation: textAppearRight both;
+  animation-timeline: view(70% 5%);
+}
+.appearTop {
+  animation: textAppearTop both;
+  animation-timeline: view(70% 5%);
+}
+.appearBottom {
+  animation: textAppearBottom both;
+  animation-timeline: view(70% 5%);
+}
+
+@property --fill {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+.circle::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  inset: -10px;
+  border-radius: inherit;
+
+  background: conic-gradient(
+    var(--color-secondary-700) var(--fill),
+    var(--color-secondary-900) var(--fill)
+  );
+  transition: --fill 0.3s ease-out;
+}
+
+@keyframes autoShowAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(200px) scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes textAppearLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-75%) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+@keyframes textAppearRight {
+  from {
+    opacity: 0;
+    transform: translateX(75%) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+@keyframes textAppearBottom {
+  from {
+    opacity: 0;
+    transform: translateY(150%) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+@keyframes textAppearTop {
+  from {
+    opacity: 0;
+    transform: translateY(-150%) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
