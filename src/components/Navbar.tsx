@@ -1,11 +1,8 @@
 import { navigation } from "@/assets/content";
-import { prefixStyle } from "@/utils/prefixer";
-import clsx from "clsx";
-import React from "react";
-import NavItem from "./NavItem";
-import { IconBase } from "react-icons";
 import { iconLibrary } from "@/assets/icons";
+import clsx from "clsx";
 import Link from "next/link";
+import React from "react";
 
 const Navbar = () => {
   const navItems = navigation || [];

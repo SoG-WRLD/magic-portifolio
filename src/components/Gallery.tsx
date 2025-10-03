@@ -1,9 +1,8 @@
 "use client";
 import { iconLibrary } from "@/assets/icons";
+import { AnimatePresence, motion, useAnimationControls } from "framer-motion";
 import Image from "next/image";
 import React, { useCallback, useEffect, useState } from "react";
-import { AnimatePresence, motion, useAnimationControls } from "framer-motion";
-import { ul } from "framer-motion/client";
 interface GalleryProps {
   images: string[];
   len: number;

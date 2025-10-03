@@ -1,7 +1,7 @@
-import Link from "next/link"; // Use next/link for client-side navigation optimization
-import Button from "./Button";
 import { ButtonType } from "@/assets/assets";
 import clsx from "clsx";
+import Link from "next/link"; // Use next/link for client-side navigation optimization
+import Button from "./Button";
 
 interface PdfLinkProps {
   pdfFileName: string; // e.g., 'your-resume.pdf'

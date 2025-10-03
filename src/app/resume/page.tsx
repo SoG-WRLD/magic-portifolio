@@ -1,9 +1,5 @@
-import { ButtonType } from "@/assets/assets";
-import Button from "@/components/Button";
 import PDFHandler from "@/components/PDFHandler";
 import { certificates, Document, resume } from "@/modules/document";
-import clsx from "clsx";
-import React from "react";
 const ResumePage = () => {
   const docs: Document[] = certificates;
 

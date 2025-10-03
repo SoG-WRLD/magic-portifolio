@@ -1,7 +1,6 @@
 import { IconType } from "react-icons";
 
 import {
-  HiArrowDownOnSquare,
   HiArrowLeft,
   HiArrowRight,
   HiArrowTopRightOnSquare,
@@ -15,7 +14,6 @@ import {
 } from "react-icons/hi2";
 
 import {
-  PiAt,
   PiBookBookmarkDuotone,
   PiBracketsCurlyDuotone,
   PiClipboardDuotone,
@@ -27,7 +25,6 @@ import {
   PiReadCvLogoDuotone,
   PiRocketLaunchDuotone,
   PiUserDuotone,
-  PiWhatsappLogoDuotone,
 } from "react-icons/pi";
 
 import { BiLink } from "react-icons/bi";
@@ -42,9 +39,8 @@ import {
   FaWhatsapp,
   FaX,
 } from "react-icons/fa6";
-import { MdOutlineViewInAr } from "react-icons/md";
-import { FaPhoneAlt } from "react-icons/fa";
 import { LuArrowDownToLine } from "react-icons/lu";
+import { MdOutlineViewInAr } from "react-icons/md";
 
 export const iconLibrary: Record<string, IconType> = {
   // Navigation icons

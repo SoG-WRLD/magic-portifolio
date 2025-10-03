@@ -1,19 +1,14 @@
 "use client";
 import { ButtonType } from "@/assets/assets";
+import { iconLibrary } from "@/assets/icons";
 import { Project } from "@/modules/project";
+import { useIsMount } from "@/utils/hooks";
 import clsx from "clsx";
+import { motion, useAnimationControls, useInView } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import Button from "./Button";
-import { iconLibrary } from "@/assets/icons";
-import {
-  useDragControls,
-  useInView,
-  motion,
-  useAnimationControls,
-} from "framer-motion";
-import Link from "next/link";
-import { useIsMount } from "@/utils/hooks";
 
 interface ProjectCardProps {
   project: Project;

@@ -25,7 +25,7 @@ const Footer = () => {
               key={index}
               className="transitions hover:scale-110 hover:opacity-65"
             >
-              <a href={link.link}>
+              <a href={link.href}>
                 {link.icon
                   ? iconLibrary[link.icon] != undefined
                     ? React.createElement(iconLibrary[link.icon], {

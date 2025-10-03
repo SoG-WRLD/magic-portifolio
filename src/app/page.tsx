@@ -4,7 +4,6 @@ import Carousel from "@/components/Carousel";
 import { projects } from "@/modules/project";
 import clsx from "clsx";
 import Link from "next/link";
-import React from "react";
 
 const Home = () => {
   return (

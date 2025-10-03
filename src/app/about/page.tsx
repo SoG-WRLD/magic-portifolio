@@ -3,7 +3,7 @@ import { person } from "@/assets/content";
 import clsx from "clsx";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 const AboutPage = () => {
   const sectionRef = useRef(null);

@@ -1,8 +1,6 @@
 "use client";
 import { Navigation } from "@/assets/content";
 import { motion, MotionConfig } from "framer-motion";
-import clsx from "clsx";
-import React from "react";
 
 interface NavItemProps {
   item: Navigation;

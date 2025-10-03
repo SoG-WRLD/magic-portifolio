@@ -1,7 +1,6 @@
 "use client";
 
 import { Project } from "@/modules/project";
-import clsx from "clsx";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 

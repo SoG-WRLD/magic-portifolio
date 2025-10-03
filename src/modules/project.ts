@@ -1,4 +1,3 @@
-import { StaticImageData } from "next/image";
 import { filterProjects, readProject } from "@/utils/projectManager";
 
 type Project = {
@@ -19,5 +18,5 @@ const pre_projects: (Project | null)[] = [
 ];
 const projects = filterProjects(pre_projects);
 
-export type { Project };
 export { projects };
+export type { Project };

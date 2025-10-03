@@ -1,6 +1,5 @@
 import { skillSet } from "@/assets/content";
 import Image from "next/image";
-import React from "react";
 
 interface RatingProps {
   count: number; // The total number of circles

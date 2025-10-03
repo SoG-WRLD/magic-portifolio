@@ -1,11 +1,9 @@
 import { ButtonType } from "@/assets/assets";
-import { iconLibrary } from "@/assets/icons";
 import Button from "@/components/Button";
 import Gallery from "@/components/Gallery";
 import { projects } from "@/modules/project";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const ProjectPage = async ({
   params,
