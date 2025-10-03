@@ -5,9 +5,8 @@ import Image from "next/image";
 import React, { useCallback, useEffect, useState } from "react";
 interface GalleryProps {
   images: string[];
-  len: number;
 }
-const Gallery = ({ images, len }: GalleryProps) => {
+const Gallery = ({ images }: GalleryProps) => {
   const popAnimation = { y: [0, 100, 0], scaleY: [1, 0.3, 1] };
   const dropAnimation = { y: [-200, 0], scale: [0.3, 1] };
   const [currImage, setCurrImage] = useState<string | null>(null);

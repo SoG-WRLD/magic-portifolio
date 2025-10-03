@@ -19,7 +19,7 @@ const ProjectPage = async ({
       <p className="absolute inset-3 left-auto text-primary-300/80">
         [ project ID: {id} ]
       </p>
-      <Gallery images={project.images} len={project.images.length} />
+      <Gallery images={project.images} />
       <div className="flex flex-col">
         <h1 className="title">{project?.name}</h1>
         <ul className="flex gap-2">

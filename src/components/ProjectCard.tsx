@@ -19,7 +19,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
   const liRefs = useRef<(HTMLLIElement | null)[]>([]);
   const imageCount = project.images.length;
   const divRef = useRef<HTMLDivElement>(null);
-  let isInView = useInView(divRef, { amount: "all", margin: "0px 200px" });
+  const isInView = useInView(divRef, { amount: "all", margin: "0px 200px" });
   const controls = useAnimationControls();
   const isMount = useIsMount();
   const scroll = (direction: string) => {
@@ -46,7 +46,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       );
     }
     return () => clearInterval(interval);
-  }, [isInView]);
+  }, [isInView, imageCount]);
 
   useEffect(() => {
     if (isMount) {
@@ -61,7 +61,8 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         inline: "center",
       });
     }
-  }, [currIndex]);
+  }, [currIndex, isMount, controls]);
+
   return (
     <div
       ref={divRef}

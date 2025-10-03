@@ -63,7 +63,7 @@ const AboutPage = () => {
       >
         <h1 className=" flex flex-col text-xl font-semibold text-primary mb-20">
           <b className="text-6xl font-bold">Gilson Vicente:</b> Shaping
-          Tomorrow's Technology with Scalable, Elegant Software Solutions
+          Tomorrow&apos;s Technology with Scalable, Elegant Software Solutions
         </h1>
         <div className="w-2/3 flex flex-col gap-5 self-start">
           <h2 className={"subtitle appearLeft"}>My Story & Journey</h2>

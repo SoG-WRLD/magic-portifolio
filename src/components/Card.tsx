@@ -14,7 +14,7 @@ const Card = ({ project }: CardProps) => {
       setIndex((i) => (i + 1) % project.images.length);
     }, 3_000);
     return () => clearInterval(interval);
-  }, []);
+  }, [project.images.length]);
   return (
     <div style={{ borderRadius: "inherit" }} className="h-full w-full flex">
       <Image
