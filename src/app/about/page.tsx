@@ -29,7 +29,7 @@ const AboutPage = () => {
             ])}
           >
             <Image
-              src={"/photos/self.jpeg"}
+              src={"/photos/self-3.png"}
               alt="portrait of Gilson Vicente"
               width={500}
               height={500}
