@@ -36,7 +36,6 @@ const PDFHandler = ({
       <div className="w-1/2 h-px bg-primary-500" />
       <div className="w-1/3 h-px bg-primary-500" />
       <div className="flex gap-3 items-center">
-        {pdfUrl}
         <a href={pdfUrl} download={pdfFileName}>
           <Button type={ButtonType.primary} label="download" icon="arrowDown" />
         </a>

@@ -8,7 +8,7 @@ import React from "react";
 const ContactPage = () => {
   const contactMethods = contacts;
   return (
-    <main className="mt-28">
+    <main className="sm:mt-28">
       <ul className="flex flex-col gap-5 p-3">
         {contactMethods.map((contact, index) => (
           <li
@@ -37,9 +37,9 @@ const ContactPage = () => {
                 icon="clipboard"
               />
             </div>
-            <div className="transitions w-fit h-full col-start-2 row-span-full opacity-30 translate-x-1/2 group-hover:opacity-100 group-hover:translate-0">
+            <div className="transitions w-fit h-full flex items-center col-start-2 row-span-full opacity-30 translate-x-1/2 group-hover:opacity-100 group-hover:translate-0">
               {React.createElement(iconLibrary[contact.icon], {
-                className: "text-9xl",
+                className: "text-8xl sm:text-9xl",
               })}
             </div>
           </li>

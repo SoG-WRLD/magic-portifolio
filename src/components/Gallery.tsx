@@ -3,6 +3,7 @@ import { iconLibrary } from "@/assets/icons";
 import { AnimatePresence, motion, useAnimationControls } from "framer-motion";
 import Image from "next/image";
 import React, { useCallback, useEffect, useState } from "react";
+import Icon from "./Icon";
 interface GalleryProps {
   images: string[];
 }
@@ -51,12 +52,12 @@ const Gallery = ({ images }: GalleryProps) => {
 
   return (
     <div className="w-full flex flex-col shadow-md shadow-black/50 p-2 sm:p-4 relative">
-      <h2 className="text-3xl flex items-end">
-        {React.createElement(iconLibrary["gallery"], {
-          className: "text-5xl",
-        })}
+      <span className="flex items-end">
+        <Icon name="gallery" className="text-6xl"/>
+      <h2 className="text-4xl pb-1">
         Gallery
       </h2>
+      </span>
       <div className="flex gap-5 w-full items-end">
         <div className="w-96 h-72 rounded-3xl backdrop-blur-lg border">
           <motion.div
@@ -91,7 +92,7 @@ const Gallery = ({ images }: GalleryProps) => {
           {display.map((image, index) => (
             <AnimatePresence key={index}>
               <motion.li
-                className="w-32 h-44 rounded-3xl origin-bottom"
+                className="sm:w-32 sm:h-44 rounded-xl sm:rounded-3xl origin-bottom"
                 transition={{
                   duration: 0.8,
                   ease: "easeOut",

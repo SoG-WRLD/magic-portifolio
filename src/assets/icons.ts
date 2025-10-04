@@ -39,6 +39,7 @@ import {
   FaWhatsapp,
   FaX,
 } from "react-icons/fa6";
+import { FiMenu } from "react-icons/fi";
 import { LuArrowDownToLine } from "react-icons/lu";
 import { MdOutlineViewInAr } from "react-icons/md";
 
@@ -60,6 +61,8 @@ export const iconLibrary: Record<string, IconType> = {
   email: FaEnvelope,
   whatsapp: FaWhatsapp,
   phone: FaPhone,
+
+  menuBar: FiMenu,
 
   rocket: PiRocketLaunchDuotone,
   gallery: PiImageDuotone,

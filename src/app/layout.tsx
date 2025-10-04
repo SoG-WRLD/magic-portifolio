@@ -3,6 +3,7 @@ import { Comfortaa } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ProjectsProvider } from "@/utils/ProjectsContext";
 
 const comfortaa = Comfortaa({
   variable: "--font-comfortaa",
@@ -23,7 +24,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${comfortaa.variable} antialiased`}>
         <Navbar />
+        <ProjectsProvider>
         {children}
+        </ProjectsProvider>
         <Footer />
       </body>
     </html>

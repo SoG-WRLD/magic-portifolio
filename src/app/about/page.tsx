@@ -14,9 +14,7 @@ const AboutPage = () => {
   });
 
   return (
-    <main className="grid grid-cols-[26%_60%_14%] p-2 pt-28 gap-y-5 gap-x-1">
-      <section className="col-span-full text-center"></section>
-
+    <main className="flex flex-col sm:grid sm:grid-cols-[26%_60%_14%] p-2 sm:pt-28 gap-y-5 gap-x-1">
       <section className="col-span-1">
         <div className="flex flex-col p-1.5 gap-5">
           <div
@@ -29,7 +27,7 @@ const AboutPage = () => {
             ])}
           >
             <Image
-              src={"/photos/self-3.png"}
+              src={"/photos/self-2.jpeg"}
               alt="portrait of Gilson Vicente"
               width={500}
               height={500}
@@ -39,7 +37,7 @@ const AboutPage = () => {
               className="object-cover"
             />
           </div>
-          <ul className="pl-0.5 text-sm flex flex-col gap-1.5 sm:text-base text-secondary list-disc list-inside">
+          <ul className="pl-0.5 text-xs flex flex-col gap-1.5 sm:text-base text-secondary list-disc list-inside">
             <li className="keyValueLI">
               Name:
               <b className="liValue">{person.name}</b>
@@ -59,13 +57,13 @@ const AboutPage = () => {
 
       <section
         ref={sectionRef}
-        className="col-span-1w-full overflow-y-scroll overflow-x-hidden h-[75dvh] flex flex-col gap-10 text-center pt-16 pb-32 px-2"
+        className="col-span-1 overflow-x-scroll overflow-y-hidden sm:overflow-y-scroll sm:overflow-x-hidden sm:h-[75dvh] flex sm:flex-col gap-10 text-center pt-16 pb-32 px-2"
       >
-        <h1 className=" flex flex-col text-xl font-semibold text-primary mb-20">
+        <h1 className=" flex flex-col text-xl font-semibold text-primary self-center mb-20">
           <b className="text-6xl font-bold">Gilson Vicente:</b> Shaping
           Tomorrow&apos;s Technology with Scalable, Elegant Software Solutions
         </h1>
-        <div className="w-2/3 flex flex-col gap-5 self-start">
+        <div className="w-dvw shrink-0 sm:w-2/3 flex flex-col gap-5 self-start">
           <h2 className={"subtitle appearLeft"}>My Story & Journey</h2>
           <p className="paragraph appearLeft">
             My passion for technology began in my final year of high school,
@@ -87,7 +85,7 @@ const AboutPage = () => {
             development.
           </p>
         </div>
-        <div className="w-1/2 flex flex-col gap-5 self-end">
+        <div className="w-dvw shrink-0 sm:w-1/2 flex flex-col gap-5 self-end">
           <h2 className={"subtitle appearRight"}>My Expertise</h2>
           <p className="paragraph appearRight">
             Over the years, I have gained practical experience across the full
@@ -108,7 +106,7 @@ const AboutPage = () => {
             my craft to stay at the forefront of the industry.
           </p>
         </div>
-        <div className="w-3/4 flex flex-col gap-5 self-center">
+        <div className="w-dvw shrink-0 sm:w-3/4 flex flex-col gap-5 self-center">
           <h2 className={"subtitle appearBottom"}>What I&apos;m Looking For</h2>
           <p className="paragraph appearBottom">
             As a dedicated college student, I am actively seeking remote
@@ -127,7 +125,7 @@ const AboutPage = () => {
             projects that push the boundaries of what technology can achieve.
           </p>
         </div>
-        <div className="w-1/2 flex flex-col gap-5 self-end">
+        <div className="w-dvw shrink-0 sm:w-1/2 flex flex-col gap-5 self-end">
           <h2 className={"subtitle appearRight"}>Education & Background</h2>
           <ul className="list-disc list-inside  flex flex-col  gap-3">
             <li className="flex flex-col appearRight">
@@ -144,7 +142,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="col-span-1 flex flex-col p-2 gap-5">
+      <section className="hidden col-span-1 sm:flex flex-col p-2 gap-5">
         <h2 className="text-lg text-center">
           Find out a little more about me:
         </h2>

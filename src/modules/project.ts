@@ -1,5 +1,3 @@
-import { filterProjects, readProject } from "@/utils/projectManager";
-
 type Project = {
   id: string;
   name: string;
@@ -12,11 +10,4 @@ type Project = {
   languages: { name: string; logoPath: string }[];
 };
 
-const pre_projects: (Project | null)[] = [
-  readProject("page_generator"),
-  readProject("dummy_project"),
-];
-const projects = filterProjects(pre_projects);
-
-export { projects };
 export type { Project };

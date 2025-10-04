@@ -10,7 +10,7 @@ const Rating = ({ count, filledCount }: RatingProps) => {
   const rating = Array.from({ length: count }, (_, index) => {
     // Check if the current circle's index is less than 'filledCount'
     const isFilled = index < filledCount;
-    const circleClassName = `w-4 h-2 border border-surface-200 rounded-md ${
+    const circleClassName = `w-3 h-2 sm:w-4 sm:h-2 border border-surface-200 rounded-md ${
       isFilled ? "bg-surface-200" : ""
     }`;
 
@@ -31,14 +31,14 @@ const SkillsPage = () => {
               {skillGroup.skills.map((skill, innerIndex) => (
                 <li
                   key={innerIndex}
-                  className="flex gap-1 sm:gap-2 items-center backdrop-blur-lg bg-surface-900/20 rounded-3xl shadow-sm shadow-black/50"
+                  className="flex gap-1 sm:gap-2 items-center backdrop-blur-lg bg-surface-900/20 rounded-2xl sm:rounded-3xl shadow-sm shadow-black/50"
                 >
                   <Image
                     src={skill.logoPath}
                     alt={skill.title}
                     width={512}
                     height={512}
-                    className="w-16 sm:w-20 h-16 sm:h-20 p-2 sm:p-3 object-contain"
+                    className="w-12 sm:w-20 h-12 sm:h-20 p-2 sm:p-3 object-contain"
                     style={{
                       borderRadius: 0,
                     }}

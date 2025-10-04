@@ -1,35 +1,34 @@
 import { ButtonType } from "@/assets/assets";
 import Button from "@/components/Button";
 import Carousel from "@/components/Carousel";
-import { projects } from "@/modules/project";
 import clsx from "clsx";
 import Link from "next/link";
 
 const Home = () => {
   return (
     <main className="relative flex flex-col">
-      <section className="relative h-[25rem] autoShow w-full flex flex-col">
-        <Carousel projects={projects} />
+      <section className="relative h-88 sm:h-[25rem] autoShow w-full flex flex-col">
+        <Carousel  />
         <Link href={"/projects"} className="flex w-full justify-center">
           <Button
             type={ButtonType.primary}
             label="Check projects"
             icon="view"
-            className="self-center text-2xl! py-2! place-self-center"
+            className="self-center  sm:text-2xl! py-1! sm:py-2! place-self-center"
           />
         </Link>
       </section>
-      <section className="relative">
+      <section className="relative my-5 sm:my-10">
         <h1
           className={clsx([
-            "flex flex-col text-5xl font-bold text-center text-primary-200",
+            "flex flex-col text-3xl sm:text-5xl font-bold text-center text-primary-200",
             "autoShow",
           ])}
         >
           <b
-            className="text-8xl font-black text-transparent font-ica drop-shadow-sm drop-shadow-primary-400/60"
+            className="text-5xl sm:text-8xl! font-black text-transparent font-ica drop-shadow-sm drop-shadow-transparent sm:drop-shadow-primary-400"
             style={{
-              WebkitTextStroke: "2px var(--primary-500)",
+              WebkitTextStroke: "2px var(--primary-400)",
             }}
           >
             Gilson Vicente,

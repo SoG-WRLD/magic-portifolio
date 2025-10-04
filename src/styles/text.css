@@ -1,10 +1,11 @@
+
 .title {
-  font-size: 44px;
   font-weight: 900;
+  @apply text-3xl sm:text-5xl;
 }
 .subtitle {
-  font-size: 32px;
   font-weight: 800;
+  @apply text-2xl sm:text-3xl;
 }
 .paragraph {
   font-size: 14px;
@@ -13,7 +14,7 @@
 .keyValueLI:nth-child(even),
 .keyValueLI:nth-child(odd) {
   color: var(--color-primary-300);
-  @apply sm:text-sm text-sm flex gap-1.5 items-baseline capitalize;
+  @apply sm:text-sm text-xs flex gap-1.5 items-baseline capitalize;
 }
 .keyValueLI:nth-child(odd) {
   color: var(--color-primary-400);
@@ -22,7 +23,7 @@
 .keyValueLI:nth-child(even) .liValue,
 .keyValueLI:nth-child(odd) .liValue {
   color: var(--color-primary-50);
-  @apply sm:text-lg text-lg font-semibold normal-case;
+  @apply sm:text-lg text-sm font-semibold normal-case;
 }
 .keyValueLI:nth-child(odd) .liValue {
   color: var(--color-primary-200);

@@ -4,9 +4,9 @@ const ResumePage = () => {
   const docs: Document[] = certificates;
 
   return (
-    <main className="mt-20 p-2">
+    <main className="sm:mt-20 p-2">
       <ul className="grid grid-cols-3 gap-y-5 gap-x-3 my-4">
-        <div className="flex flex-col w-1/2 appearTop place-self-center items-center col-span-full">
+        <div className="flex flex-col w-11/12 sm:w-1/2 appearTop place-self-center items-center col-span-full">
           <h2 className="subtitle">Resume</h2>
           <PDFHandler
             displayText={resume.title}

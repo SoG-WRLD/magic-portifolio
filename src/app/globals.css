@@ -101,7 +101,7 @@ body {
   justify-content: space-between;
   flex-direction: column;
   color: var(--surface-50);
-  font-family: var(--font-comfortaa), Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   overflow-x: clip;
 }
 
