@@ -36,6 +36,8 @@ export const ProjectsProvider = ({ children }: { children: ReactNode }) => {
         setLoading(true);
         const res = await fetch("/api/filterProjects", req);
         const data = await res.json();
+        
+        console.log(data);
         setProjects(data);
       } catch (error) {
         console.error(error);
