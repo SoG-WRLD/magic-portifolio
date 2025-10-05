@@ -2,6 +2,7 @@ import { buttonStyle, ButtonType } from "@/assets/assets";
 import { iconLibrary, IconName } from "@/assets/icons";
 import clsx from "clsx";
 import React from "react";
+import Icon from "./Icon";
 
 interface ButtonProps {
   label?: string;
@@ -20,11 +21,6 @@ const Button = ({
   props,
 }: ButtonProps) => {
   const buttonStyles = buttonStyle[type];
-  const hasIcon = icon
-    ? iconLibrary[icon] != undefined
-      ? true
-      : false
-    : false;
   return (
     <button
       className={clsx([
@@ -37,7 +33,7 @@ const Button = ({
       {...props}
     >
       {label && <span>{label}</span>}
-      <span>{hasIcon ? React.createElement(iconLibrary[icon!]) : icon}</span>
+      {icon && <Icon name={icon} />}
     </button>
   );
 };

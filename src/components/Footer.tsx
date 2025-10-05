@@ -2,6 +2,7 @@ import { socials } from "@/assets/content";
 import { iconLibrary } from "@/assets/icons";
 import Image from "next/image";
 import React from "react";
+import Icon from "./Icon";
 
 const Footer = () => {
   return (
@@ -25,15 +26,7 @@ const Footer = () => {
               key={index}
               className="transitions hover:scale-110 hover:opacity-65"
             >
-              <a href={link.href}>
-                {link.icon
-                  ? iconLibrary[link.icon] != undefined
-                    ? React.createElement(iconLibrary[link.icon], {
-                        size: 32,
-                      })
-                    : link.icon
-                  : false}
-              </a>
+              <a href={link.href}>{link.icon && <Icon name={link.icon} />}</a>
             </li>
           ))}
         </ul>

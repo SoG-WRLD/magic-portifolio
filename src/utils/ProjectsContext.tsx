@@ -20,7 +20,7 @@ export const useGlobalContext = () => {
 
 export const ProjectsProvider = ({ children }: { children: ReactNode }) => {
   const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,14 +31,13 @@ export const ProjectsProvider = ({ children }: { children: ReactNode }) => {
           folder_names: ["page_generator.0.1", "dummy_project.0.0.1"],
         }),
       };
-      
+
       try {
         setLoading(true);
-        const res = await fetch("/api/filterProjects", req);
-        console.log(res);
-        
+        const res = await fetch("/api/getProjects", req);
+        console.log("res", res);
         const data = await res.json();
-        
+
         console.log(data);
         setProjects(data);
       } catch (error) {

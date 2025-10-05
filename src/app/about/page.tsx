@@ -8,7 +8,8 @@ import React, { useRef, useState } from "react";
 const AboutPage = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({ container: sectionRef });
-  const [scroll, setScroll] = useState("");
+  // Initialize scroll to '0%' so server and client markup match
+  const [scroll, setScroll] = useState("0%");
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     setScroll(`${Math.round(latest * 100)}%`);
   });
@@ -44,7 +45,7 @@ const AboutPage = () => {
             </li>
             <li className="keyValueLI">
               Date of Birth:
-              <b className="liValue">{person.date_of_birth}</b>
+              <b className="liValue">{person.birthDate}</b>
             </li>
             {Object.entries(person.info).map(([key, value], index) => (
               <li key={index} className="keyValueLI">

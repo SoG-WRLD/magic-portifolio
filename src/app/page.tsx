@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <main className="relative flex flex-col">
       <section className="relative h-88 sm:h-[25rem] autoShow w-full flex flex-col">
-        <Carousel  />
+        <Carousel />
         <Link href={"/projects"} className="flex w-full justify-center">
           <Button
             type={ButtonType.primary}

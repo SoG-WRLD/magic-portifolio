@@ -7,7 +7,10 @@ interface IconProps {
 }
 const Icon = ({ name, className }: IconProps) => {
   if (iconLibrary[name] === undefined) return <div>{name}</div>;
-  return React.createElement(iconLibrary[name], { className });
+  return React.createElement(iconLibrary[name], {
+    className,
+    suppressHydrationWarning: true,
+  });
 };
 
 export default Icon;

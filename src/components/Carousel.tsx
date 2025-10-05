@@ -1,31 +1,33 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Card from "./Card";
 import { useGlobalContext } from "@/utils/ProjectsContext";
 import { Project } from "@/modules/project";
+
 const get3dValues = () => {
-    if (typeof window === "undefined") {
-      return { perspective: 10000, rotateX: -4, zOffset: 550 };
-    }
-    const width = window.innerWidth;
-    if (width < 640) {
-      // Mobile
-      return { perspective: 4000, rotateX: -3, zOffset: 220 };
-    } else if (width < 1024) {
-      // Tablet
-      return { perspective: 7000, rotateX: -4, zOffset: 450 };
-    } else {
-      // Desktop
-      return { perspective: 10000, rotateX: -4, zOffset: 550 };
-    }
-  };
+  if (typeof window === "undefined") {
+    return { perspective: 10000, rotateX: -4, zOffset: 550 };
+  }
+  const width = window.innerWidth;
+  if (width < 640) {
+    return { perspective: 4000, rotateX: -3, zOffset: 220 }; // Mobile
+  } else if (width < 1024) {
+    return { perspective: 7000, rotateX: -4, zOffset: 450 }; // Tablet
+  } else {
+    return { perspective: 10000, rotateX: -4, zOffset: 550 }; // Desktop
+  }
+};
 const Carousel = () => {
-  const projects:Project[] = useGlobalContext();
-  const [threeD, setThreeD] = useState(get3dValues());
+  const projects: Project[] = useGlobalContext();
 
   // Responsive values for perspective, rotateX, and zOffset
+  const [threeD, setThreeD] = useState({
+    perspective: 10000,
+    rotateX: -4,
+    zOffset: 550,
+  });
+
   useEffect(() => {
     const handleResize = () => setThreeD(get3dValues());
     window.addEventListener("resize", handleResize);
@@ -33,7 +35,7 @@ const Carousel = () => {
   }, []);
 
   const { perspective, rotateX, zOffset } = threeD;
-    if (!projects) {
+  if (!projects) {
     return (
       <div className="w-full h-full flex items-center justify-center">
         <div className="animate-pulse w-56 h-44 sm:w-96 sm:h-56 bg-primary-900/30 rounded-3xl flex items-center justify-center">
@@ -64,11 +66,15 @@ const Carousel = () => {
             key={index}
             className="absolute inset-0 backdrop-blur-xl w-full h-full border rounded-3xl shadow-md shadow-primary-700/50 hover:shadow-primary-400/50"
             initial={{
-              transform: `rotateY(${index * (360 / projects.length)}deg) translateZ(${zOffset}px) scale(1)`,
+              transform: `rotateY(${
+                index * (360 / projects.length)
+              }deg) translateZ(${zOffset}px) scale(1)`,
               borderColor: "var(--primary-600)",
             }}
             whileHover={{
-              transform: `rotateY(${index * (360 / projects.length)}deg) translateZ(${zOffset}px) scale(1.05)`,
+              transform: `rotateY(${
+                index * (360 / projects.length)
+              }deg) translateZ(${zOffset}px) scale(1.05)`,
               borderColor: "var(--primary-300)",
             }}
           >
@@ -78,5 +84,5 @@ const Carousel = () => {
       </motion.ul>
     </div>
   );
-}
+};
 export default Carousel;

@@ -4,10 +4,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  birthDate: new Date("12/30/2004"),
-  get date_of_birth() {
-    return `${this.birthDate.toDateString()}`;
-  },
+  birthDate: "2004-12-30",
   avatar: "/images/avatar.jpg",
   info: {
     nickname: "SoG",

@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import Button from "./Button";
+import Icon from "./Icon";
 
 interface ProjectCardProps {
   project: Project;
@@ -77,7 +78,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       >
         <div className="sm:text-2xl font-semibold flex flex-col gap-1 w-fit px-3">
           <span className="flex items-end gap-1">
-            {React.createElement(iconLibrary["gallery"], { size: 36 })}
+            <Icon name="gallery" className="text-4xl" />
             <h2 className="row-start-1">Gallery</h2>
           </span>
           <div className="self-center w-3/4 h-px bg-primary-500" />
@@ -90,16 +91,16 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         >
           <div className="absolute top-1/2 -translate-y-1/2 inset-x-0 w-full flex justify-between z-10">
             <button onClick={() => scroll("left")}>
-              {React.createElement(iconLibrary["arrowLeft"], {
-                className:
-                  "text-4xl rounded-3xl p-1 transitions border cursor-pointer border-transparent hover:border-primary-300/80 bg-primary-700/60 hover:bg-primary-700/90 text-primary-300",
-              })}
+              <Icon
+                name="arrowLeft"
+                className="text-4xl rounded-3xl p-1 transitions border cursor-pointer border-transparent hover:border-primary-300/80 bg-primary-700/60 hover:bg-primary-700/90 text-primary-300"
+              />
             </button>
             <button onClick={() => scroll("right")}>
-              {React.createElement(iconLibrary["arrowRight"], {
-                className:
-                  "text-4xl rounded-3xl p-1 transitions border cursor-pointer border-transparent hover:border-primary-300/80 bg-primary-700/60 hover:bg-primary-700/90 text-primary-300",
-              })}
+              <Icon
+                name="arrowRight"
+                className="text-4xl rounded-3xl p-1 transitions border cursor-pointer border-transparent hover:border-primary-300/80 bg-primary-700/60 hover:bg-primary-700/90 text-primary-300"
+              />
             </button>
           </div>
           <ul className="overflow-hidden flex flex-nowrap w-full gap-1 sm:justify-start">

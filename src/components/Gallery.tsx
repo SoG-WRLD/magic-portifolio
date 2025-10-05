@@ -53,10 +53,8 @@ const Gallery = ({ images }: GalleryProps) => {
   return (
     <div className="w-full flex flex-col shadow-md shadow-black/50 p-2 sm:p-4 relative">
       <span className="flex items-end">
-        <Icon name="gallery" className="text-6xl"/>
-      <h2 className="text-4xl pb-1">
-        Gallery
-      </h2>
+        <Icon name="gallery" className="text-6xl" />
+        <h2 className="text-4xl pb-1">Gallery</h2>
       </span>
       <div className="flex gap-5 w-full items-end">
         <div className="w-96 h-72 rounded-3xl backdrop-blur-lg border">
@@ -81,9 +79,10 @@ const Gallery = ({ images }: GalleryProps) => {
                 className="w-full h-full bg-surface-300/20"
                 style={{ borderRadius: "inherit" }}
               >
-                {React.createElement(iconLibrary["gallery"], {
-                  className: "w-1/2 h-full place-self-center opacity-50",
-                })}
+                <Icon
+                  name="gallery"
+                  className="w-1/2 h-full self-center place-self-center opacity-50"
+                />
               </div>
             )}
           </motion.div>

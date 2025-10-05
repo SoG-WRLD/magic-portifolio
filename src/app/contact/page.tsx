@@ -2,6 +2,7 @@ import { ButtonType } from "@/assets/assets";
 import { contacts } from "@/assets/content";
 import { iconLibrary } from "@/assets/icons";
 import Button from "@/components/Button";
+import Icon from "@/components/Icon";
 import clsx from "clsx";
 import React from "react";
 
@@ -38,9 +39,7 @@ const ContactPage = () => {
               />
             </div>
             <div className="transitions w-fit h-full flex items-center col-start-2 row-span-full opacity-30 translate-x-1/2 group-hover:opacity-100 group-hover:translate-0">
-              {React.createElement(iconLibrary[contact.icon], {
-                className: "text-8xl sm:text-9xl",
-              })}
+              <Icon name={contact.icon} className="text-8xl sm:text-9xl" />
             </div>
           </li>
         ))}
