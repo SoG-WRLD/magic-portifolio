@@ -1,9 +1,9 @@
 {
   "name": "Page generator",
   "id": "page_generator.0.1",
-  "description": "Page generator for celebrations or invitations, dynamically creates pages and uploads to the cloud",
+  "description": "Page generator for celebrations or invitations, dynamically creates pages and uploads to the cloud(currently inactive)",
   "icon": "",
   "images": [],
-  "languages": [{ "name": "TypeScript", "logoPath": "/icons/typescript.svg" }],
-  "status": "uploaded"
+  "languages": [{ "name": "TypeScript", "logoPath": "/icons/typescript.svg" },{ "name": "Next.js", "logoPath": "/icons/nextjs.svg" },{ "name": "TailwindCSS", "logoPath": "/icons/tailwindcss.svg" }],
+  "status": "not-uploaded"
 }

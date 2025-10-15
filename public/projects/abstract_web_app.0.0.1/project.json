@@ -1,0 +1,11 @@
+{
+  "name": "Abstract web app",
+  "id": "abstract_web_app.0.0.1",
+  "description": "Web app with no actual use, my first interaction with web development",
+  "icon": "",
+  "images": [],
+  "languages": [{ "name": "JavaScript", "logoPath": "/icons/javascript.svg" },{ "name": "HTML5", "logoPath": "/icons/html5.svg" },{ "name": "CSS3", "logoPath": "/icons/css3.svg" }],
+  "status": "uploaded",
+  "link": "https://abstract-web-app.vercel.app/",
+  "githubRepo":"https://github.com/SoG-WRLD/Abstract_Web_App"
+}

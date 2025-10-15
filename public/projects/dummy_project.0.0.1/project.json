@@ -1,9 +1,0 @@
-{
-  "name": "Dummy project",
-  "id": "dummy_project.0.0.1",
-  "description": "this is only a dummy model of a project, images taken from some guy on youtube Lun Dev or some, got the 3D carousel from him",
-  "icon": "",
-  "images": [],
-  "languages": [{ "name": "HTML", "logoPath": "/icons/html5.svg" }],
-  "status": "not-uploaded"
-}
