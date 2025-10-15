@@ -28,7 +28,7 @@ export const ProjectsProvider = ({ children }: { children: ReactNode }) => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          folder_names: ["page_generator.0.1", "dummy_project.0.0.1"],
+          folder_names: ["page_generator.0.1", "tictactoe.0.0.1", "abstract_web_app.0.0.1"],
         }),
       };
 
