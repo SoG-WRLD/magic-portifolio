@@ -1,7 +1,5 @@
 import { socials } from "@/assets/content";
-import { iconLibrary } from "@/assets/icons";
 import Image from "next/image";
-import React from "react";
 import Icon from "./Icon";
 
 const Footer = () => {

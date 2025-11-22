@@ -3,7 +3,6 @@ import { ButtonType } from "@/assets/assets";
 import { skillSet } from "@/assets/content";
 import Button from "@/components/Button";
 import Carousel from "@/components/Carousel";
-import { useGlobalContext } from "@/utils/ProjectsContext";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -95,7 +94,6 @@ const Home = () => {
       ),
     },
   ];
-  const [cardStack, setCardStack] = React.useState(cards);
   const [topCard, setTopCard] = React.useState<number>(0);
 
   const handleDrag = (
@@ -109,8 +107,8 @@ const Home = () => {
       const offsetX = info.offset.x; // Get the offset from Framer Motion
       // Screen edges
       const edges = {
-        left: -200,
-        right: 200,
+        left: -100,
+        right: 100,
       };
 
       // Check if card hitbox hits the screen edges
@@ -159,7 +157,7 @@ const Home = () => {
           className="flex justify-center relative h-80 sm:h-96 w-full"
           ref={stackAreaRef}
         >
-          {cardStack.map((card, index) => (
+          {cards.map((card, index) => (
             <motion.li
               key={index}
               ref={(el) => {

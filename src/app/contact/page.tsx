@@ -1,10 +1,8 @@
 import { ButtonType } from "@/assets/assets";
 import { contacts } from "@/assets/content";
-import { iconLibrary } from "@/assets/icons";
 import Button from "@/components/Button";
 import Icon from "@/components/Icon";
 import clsx from "clsx";
-import React from "react";
 
 const ContactPage = () => {
   const contactMethods = contacts;
