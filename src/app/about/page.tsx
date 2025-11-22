@@ -15,7 +15,7 @@ const AboutPage = () => {
   });
 
   return (
-    <main className="flex flex-col sm:grid sm:grid-cols-[26%_60%_14%] p-2 sm:pt-28 gap-y-5 gap-x-1">
+    <main className="flex flex-col md:grid md:grid-cols-[26%_60%_14%] p-2 sm:pt-28 gap-y-5 gap-x-1">
       <section className="col-span-1">
         <div className="flex flex-col p-1.5 gap-5">
           <div
@@ -38,7 +38,7 @@ const AboutPage = () => {
               className="object-cover"
             />
           </div>
-          <ul className="pl-0.5 text-xs flex flex-col gap-1.5 sm:text-base text-secondary list-disc list-inside">
+          <ul className="pl-0.5 text-xs flex flex-col gap-1.5 md:text-base text-secondary list-disc list-inside sm:self-center sm:items-center">
             <li className="keyValueLI">
               Name:
               <b className="liValue">{person.name}</b>
@@ -58,27 +58,27 @@ const AboutPage = () => {
 
       <section
         ref={sectionRef}
-        className="col-span-1 overflow-x-scroll overflow-y-hidden sm:overflow-y-scroll sm:overflow-x-hidden sm:h-[75dvh] flex sm:flex-col gap-10 text-center pt-16 pb-32 px-2"
+        className="col-span-1 overflow-x-scroll overflow-y-hidden md:overflow-y-scroll md:overflow-x-hidden md:h-[75dvh] flex md:flex-col gap-10 text-center md:pt-16 pb-16 md:pb-32 px-2"
       >
         <h1 className=" flex flex-col text-xl font-semibold text-primary self-center mb-20">
-          <b className="text-6xl font-bold">Gilson Vicente:</b> Shaping
+          <b className="text-6xl font-bold ">Gilson Vicente:</b> Shaping
           Tomorrow&apos;s Technology with Scalable, Elegant Software Solutions
         </h1>
-        <div className="w-dvw shrink-0 sm:w-2/3 flex flex-col gap-5 self-start">
-          <h2 className={"subtitle appearLeft"}>My Story & Journey</h2>
-          <p className="paragraph appearLeft">
+        <div className="w-dvw shrink-0 md:w-2/3 flex flex-col gap-5 self-start">
+          <h2 className={"subtitle appearTop md:appearLeft"}>My Story & Journey</h2>
+          <p className="paragraph appearTop md:appearLeft">
             My passion for technology began in my final year of high school,
             where I was introduced to the fundamentals of programming through
             Pascal in my TIC&apos;s class.
           </p>
-          <p className="paragraph appearLeft">
+          <p className="paragraph appearTop md:appearLeft">
             This initial exposure sparked a curiosity that quickly grew into a
             deep fascination. During the transitional period between high school
             and college, I immersed myself in Python, captivated by its
             versatility and the endless possibilities it offered for creative
             problem-solving.
           </p>
-          <p className="paragraph appearLeft">
+          <p className="paragraph appearTop md:appearLeft">
             Programming soon became more than just a skill—it became my way of
             thinking. I thrive on the challenge of breaking down complex
             problems and crafting clear, efficient solutions through code. This
@@ -86,20 +86,20 @@ const AboutPage = () => {
             development.
           </p>
         </div>
-        <div className="w-dvw shrink-0 sm:w-1/2 flex flex-col gap-5 self-end">
-          <h2 className={"subtitle appearRight"}>My Expertise</h2>
-          <p className="paragraph appearRight">
+        <div className="w-dvw shrink-0 md:w-1/2 flex flex-col gap-5 self-end">
+          <h2 className={"subtitle appearBottom md:appearRight"}>My Expertise</h2>
+          <p className="paragraph appearBottom md:appearRight">
             Over the years, I have gained practical experience across the full
             spectrum of software development, including frontend, backend, and
             mobile platforms.
           </p>
-          <p className="paragraph appearRight">
+          <p className="paragraph appearBottom md:appearRight">
             While I value the unique challenges each area presents, I am
             especially passionate about frontend and mobile development. I excel
             at transforming intricate concepts into intuitive, visually
             compelling user interfaces that elevate the overall user experience.
           </p>
-          <p className="paragraph appearRight">
+          <p className="paragraph appearBottom md:appearRight">
             My work is driven by a commitment to both functionality and
             aesthetics, ensuring that every solution I create is not only robust
             and reliable but also engaging and user-friendly. I am always eager
@@ -107,7 +107,7 @@ const AboutPage = () => {
             my craft to stay at the forefront of the industry.
           </p>
         </div>
-        <div className="w-dvw shrink-0 sm:w-3/4 flex flex-col gap-5 self-center">
+        <div className="w-dvw shrink-0 md:w-3/4 flex flex-col gap-5 self-center">
           <h2 className={"subtitle appearBottom"}>What I&apos;m Looking For</h2>
           <p className="paragraph appearBottom">
             As a dedicated college student, I am actively seeking remote
@@ -115,7 +115,7 @@ const AboutPage = () => {
             collaborate with talented professionals from around the world.
           </p>
           <p className="paragraph appearBottom">
-            I am open to a wide variety of projects, from small-scale
+            I am open to a wide variety of projects, from mdall-scale
             applications to ambitious, large-scale systems. My ideal role would
             allow me to contribute meaningfully to a dynamic team, tackle
             challenging problems, and further develop my skills in a real-world
@@ -126,16 +126,16 @@ const AboutPage = () => {
             projects that push the boundaries of what technology can achieve.
           </p>
         </div>
-        <div className="w-dvw shrink-0 sm:w-1/2 flex flex-col gap-5 self-end">
-          <h2 className={"subtitle appearRight"}>Education & Background</h2>
+        <div className="w-dvw shrink-0 md:w-1/2 flex flex-col gap-5 self-end">
+          <h2 className={"subtitle appearBottom md:appearRight"}>Education & Background</h2>
           <ul className="list-disc list-inside  flex flex-col  gap-3">
-            <li className="flex flex-col appearRight">
+            <li className="flex flex-col appearBottom md:appearRight">
               <b>2011-2017: </b>1st-7th grade at Colegio Nyamunda
             </li>
-            <li className="flex flex-col appearRight">
+            <li className="flex flex-col appearBottom md:appearRight">
               <b>2018-2022: </b> 8th-12th grade at Colegio Kitabu
             </li>
-            <li className="flex flex-col appearRight">
+            <li className="flex flex-col appearBottom md:appearRight">
               <b>Currently: </b> 3rd year Engineering and Computer Science
               student at ISUTC.
             </li>
@@ -143,7 +143,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="hidden col-span-1 sm:flex flex-col p-2 gap-5">
+      <section className="hidden col-span-1 md:flex flex-col p-2 gap-5">
         <h2 className="text-lg text-center">
           Find out a little more about me:
         </h2>

@@ -1,6 +1,6 @@
 {
-  "name": "Page generator",
-  "id": "page_generator.0.1",
+  "name": "Tic Tac Toe",
+  "id": "tictactoe.0.0.1",
   "description": "Local multiplayer tic-tac-toe game, not fully finished",
   "icon": "",
   "images": [],

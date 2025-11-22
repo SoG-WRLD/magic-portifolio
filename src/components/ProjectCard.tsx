@@ -70,13 +70,13 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       <div
         ref={divRef}
         className={clsx([
-          "h-80 w-full hidden sm:grid grid-rows-[25%_75%] even:grid-cols-[25%_25%_40%] odd:grid-cols-[40%_25%_25%] p-3 justify-between items-center bg-blue-800",
+          "h-80 w-full hidden lg:grid grid-rows-[25%_75%] even:grid-cols-[25%_25%_40%] odd:grid-cols-[40%_25%_25%] p-3 justify-between items-center",
           "even:[background:linear-gradient(115deg,transparent_60%,var(--primary-900)_85%,var(--primary-800)_100%)] even:",
           "odd:[background:linear-gradient(-115deg,transparent_60%,var(--primary-900)_85%,var(--primary-800)_100%)]",
           index % 2 === 0 ? "appearLeft" : "appearRight",
         ])}
       >
-        <div className="sm:text-2xl font-semibold flex flex-col gap-1 w-fit px-3">
+        <div className="lg:text-2xl font-semibold flex flex-col gap-1 w-fit px-3">
           <span className="flex items-end gap-1">
             <Icon name="gallery" className="text-4xl" />
             <h2 className="row-start-1">Gallery</h2>
@@ -103,7 +103,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
               />
             </button>
           </div>
-          <ul className="overflow-hidden flex flex-nowrap w-full gap-1 sm:justify-start">
+          <ul className="overflow-hidden flex flex-nowrap w-full gap-1 lg:justify-start">
             {project.images.map((image, index) => (
               <li
                 ref={(el) => {
@@ -140,11 +140,11 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             ))}
           </ul>
         </div>
-        <div className="col-start-2 flex row-start-1 row-span-full flex-col gap-3 text-center h-full ">
-          <div className="flex flex-col text-center gap-1 sm:gap-2">
+        <div className="col-start-2 flex row-start-1 row-span-full flex-col gap-3 text-center h-full z-10">
+          <div className="flex flex-col text-center gap-1 lg:gap-2">
             <h2 className="subtitle capitalize">{project.name}</h2>
             <div className="w-3/4 h-px bg-primary-500 self-center" />
-            <p className="line-clamp-5 text-sm sm:text-base">
+            <p className="line-clamp-5 text-sm lg:text-base">
               {project.description}
             </p>
           </div>
@@ -216,7 +216,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       </div>
       <div
         className={clsx([
-          "sm:hidden w-full h-40 p-3 relative bg-primary-800 rounded-2xl text-center",
+          "lg:hidden w-full h-40 p-3 relative bg-primary-800 rounded-2xl text-center",
           index % 2 === 0
             ? "appearLeft [background:linear-gradient(115deg,transparent_60%,var(--primary-900)_85%,var(--primary-800)_100%)]"
             : "appearRight [background:linear-gradient(-115deg,transparent_60%,var(--primary-900)_85%,var(--primary-800)_100%)]",

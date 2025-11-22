@@ -26,7 +26,7 @@ const Footer = () => {
               key={index}
               className="transitions hover:scale-110 hover:opacity-65"
             >
-              <a href={link.href}>{link.icon && <Icon name={link.icon} />}</a>
+              <a href={link.href} className="w-7 h-7 sm:w-8 sm:h-8 shrink-0">{link.icon && <Icon name={link.icon} className="w-full h-full"/>}</a>
             </li>
           ))}
         </ul>

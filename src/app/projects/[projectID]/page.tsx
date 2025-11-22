@@ -16,8 +16,7 @@ interface ProjectPageProps {
 }
 
 const ProjectPage = ({ project, id }: ProjectPageProps) => {
-  if (!project) return <div>404 | project not found</div>;
-  console.log(project);
+  if (!project) return <div className="text-3xl sm:text-4xl font-semibold font-mono">404 | project not found</div>;
   
   return (
     <main className="p-2 flex flex-col gap-5 sm:mt-24">

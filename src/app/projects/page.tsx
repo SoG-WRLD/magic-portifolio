@@ -10,7 +10,7 @@ const ProjectsPage = () => {
       <h1 className="title sm:pl-5 pl-3">
         Visit some of <b>my work</b>
       </h1>
-      <ul className="flex flex-col gap-5 sm:gap-10 my-10">
+      <ul className="flex flex-col gap-10 lg:gap-24 my-10">
         {projects.map((project, index) => (
           <ProjectCard project={project} key={index} index={index} />
         ))}

@@ -84,6 +84,7 @@ const skillSet: SkillSet[] = [
     name: "Frameworks",
     skills: [
       { title: "React.js", logoPath: "/icons/react.svg", proficiency: 4 },
+      { title: "Next.js", logoPath: "/icons/nextjs.svg", proficiency: 3 },
       { title: "React Native", logoPath: "/icons/react.svg", proficiency: 3 },
       { title: "Flutter", logoPath: "/icons/flutter.svg", proficiency: 3 },
       { title: "Node.js", logoPath: "/icons/nodejs.svg", proficiency: 3 },
@@ -92,7 +93,6 @@ const skillSet: SkillSet[] = [
         logoPath: "/icons/tailwindcss.svg",
         proficiency: 4,
       },
-      { title: "Next.js", logoPath: "/icons/nextjs.svg", proficiency: 3 },
     ],
   },
   {

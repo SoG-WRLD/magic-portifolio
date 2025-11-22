@@ -5,14 +5,14 @@ import Card from "./Card";
 import { useGlobalContext } from "@/utils/ProjectsContext";
 import { Project } from "@/modules/project";
 
-const get3dValues = () => {
+const get3dValues = (width: number) => {
   if (typeof window === "undefined") {
     return { perspective: 10000, rotateX: -4, zOffset: 550 };
   }
-  const width = window.innerWidth;
+
   if (width < 640) {
-    return { perspective: 4000, rotateX: -3, zOffset: 220 }; // Mobile
-  } else if (width < 1024) {
+    return { perspective: 4000, rotateX: -3, zOffset: 250 }; // Mobile
+  } else if (width > 640 && width < 1024) {
     return { perspective: 7000, rotateX: -4, zOffset: 450 }; // Tablet
   } else {
     return { perspective: 10000, rotateX: -4, zOffset: 550 }; // Desktop
@@ -28,11 +28,20 @@ const Carousel = () => {
     zOffset: 550,
   });
 
+  // keep track of width without touching `window` during server render
+  const [width, setWidth] = useState<number>(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
+
   useEffect(() => {
-    const handleResize = () => setThreeD(get3dValues());
+    const handleResize = () => {
+      setThreeD(get3dValues(width));
+      if (typeof window !== "undefined") setWidth(window.innerWidth);
+    };
+    handleResize(); // initialize on mount (client-only)
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [width]);
 
   const { perspective, rotateX, zOffset } = threeD;
   if (!projects) {
