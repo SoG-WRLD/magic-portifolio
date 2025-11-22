@@ -88,7 +88,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             index % 2 === 0 ? "col-start-1" : "col-start-3",
           ])}
         >
-          <div className="absolute top-1/2 -translate-y-1/2 inset-x-0 w-full flex justify-between z-10">
+          <div className="absolute top-1/2 -translate-y-1/2 inset-x-0 w-full flex justify-between z-50">
             <button onClick={() => scroll("left")}>
               <Icon
                 name="arrowLeft"
@@ -238,7 +238,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             />
           </div>
           <span className="flex flex-col gap-1">
-            <p className="text-sm indent-1 overflow-hidden text-wrap text-ellipsis line-clamp-3">
+            <p className="text-sm indent-1 overflow-hidden text-wrap text-ellipsis line-clamp-3 z-10">
               {project.description}
             </p>
             <div className="flex gap-3 justify-center">

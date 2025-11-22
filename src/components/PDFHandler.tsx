@@ -21,8 +21,8 @@ const PDFHandler = ({
   return (
     <li
       className={clsx([
-        "rounded-3xl backdrop-blur-lg bg-gradient-to-t from-secondary-950/50 to-30% to-primary-800/50 border border-primary-800 p-2 flex flex-col gap-2 w-full",
-        "nth-[4n+1]:col-span-2 nth-[4n+2]:col-span-1 nth-[4n+3]:col-span-1 nth-[4n+4]:col-span-2",
+        "rounded-3xl backdrop-blur-lg bg-gradient-to-t from-secondary-950/50 to-30% to-primary-800/50 border border-primary-800 p-2 flex flex-col gap-2 w-full col-span-full",
+        "lg:nth-[4n+1]:col-span-2 lg:nth-[4n+2]:col-span-1 lg:nth-[4n+3]:col-span-1 lg:nth-[4n+4]:col-span-2",
         index % 2 === 0 ? "appearLeft" : "appearRight",
       ])}
     >

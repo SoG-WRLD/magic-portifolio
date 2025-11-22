@@ -27,13 +27,20 @@ const ContactPage = () => {
               {contact.content}
             </p>
             <div className="flex gap-2 items-center col-start-1">
-              <a href={contact.href}>
-                <Button icon="link" label="Check" type={ButtonType.primary} />
-              </a>
+              {contact.href !== "" && (
+                <a href={contact.href}>
+                  <Button icon="link" label="Check" type={ButtonType.primary} />
+                </a>
+              )}
               <Button
                 type={ButtonType.secondary}
                 label="Copy"
                 icon="clipboard"
+                props={{
+                  onClick: () => {
+                    navigator.clipboard.writeText(contact.content);
+                  },
+                }}
               />
             </div>
             <div className="transitions w-fit h-full flex items-center col-start-2 row-span-full opacity-30 translate-x-1/2 group-hover:opacity-100 group-hover:translate-0">
