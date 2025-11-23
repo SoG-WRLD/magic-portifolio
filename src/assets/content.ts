@@ -31,7 +31,7 @@ const contacts = [
   {
     name: "Instagram",
     icon: "instagram",
-    href: `www.`,
+    href: `https://www.instagram.com/_sog.dev/`,
     content: "_sog.dev",
   },
   {

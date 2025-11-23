@@ -1,3 +1,4 @@
+"use client";
 import { ButtonType } from "@/assets/assets";
 import { contacts } from "@/assets/content";
 import Button from "@/components/Button";
